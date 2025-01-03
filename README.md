@@ -54,13 +54,6 @@ KEY = 'YOUR_GOOGLE_API_KEY_HERE'
 ├── app.py                   # Main Streamlit app for visualizations and querying
 └── plt.py                   # Generated Python code for visualizations (temporary)
 ```
-
-### Files Explained:
-1. **`train.py`**: This script trains a custom classification model using a dataset (`train_data.csv`). It uses the Hugging Face `Roberta` transformer model to classify whether a graph is needed based on the query.
-2. **`app.py`**: The main Streamlit app where users can upload a CSV file, input a query, and generate insights or visualizations based on that query. It uses the `google-generativeai` API to generate code and then runs that code to display the chart.
-3. **`data.csv`**: A sample CSV file used for data analysis and visualization. Users can upload their own CSV files.
-4. **`train_data.csv`**: A CSV file with queries and corresponding labels used to train the model to predict whether visual representation (graphs) is needed for a given query.
-
 ## How to Run the Project
 
 
