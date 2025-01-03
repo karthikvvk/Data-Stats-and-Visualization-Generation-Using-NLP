@@ -22,9 +22,7 @@ generation_config = {
 "response_mime_type": "text/plain"}
 model = genai.GenerativeModel( model_name="gemini-1.5-flash", generation_config=generation_config,)
 chat_session = model.start_chat(history=[])
-csv_path = 'data.csv'
-dataset = pd.read_csv(csv_path)
-dataset_str = dataset.head(20).to_string(index=False)
+
 nlp = spacy.load("en_core_web_sm")
 transformer_model = RobertaForSequenceClassification.from_pretrained("./trained_roberta")
 tokenizer = RobertaTokenizer.from_pretrained("./trained_roberta")
@@ -59,7 +57,7 @@ if uploaded_file:
                 {dataset.describe(include='all')}
 
                 Dataset:
-                {dataset_str}
+                {dataset}
 
                 query: "{user_query}"
                 graph/visual_representation: {graph_flag_query} (generate python matplotlib code accordingly)
@@ -67,7 +65,7 @@ if uploaded_file:
 
                 NOTE: Do not include citations or sources and decorative explanations.
                 Just return the code.
-                Full dataset available at 'csv_path = 'data.csv'
+                Full dataset available at 'csv_path = '{uploaded_file}'
                 """
 
                 response = chat_session.send_message(query)
@@ -75,7 +73,7 @@ if uploaded_file:
                 with open("plt.py", "w") as fh:
                     fh.write(python_code)
 
-                #runpy.run_path('plt.py')
+                runpy.run_path('plt.py')
                 st.pyplot(plt.gcf())
                 st.code(python_code, language="python")
 
