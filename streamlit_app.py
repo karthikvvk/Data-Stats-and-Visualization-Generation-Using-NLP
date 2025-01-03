@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 runpy.run_path('train.py')
 
 
-KEY = ''
+KEY = 'YOUR_GOOGLE_API_KEY_HERE'
 genai.configure(api_key=KEY)
 generation_config = {
 "temperature": 1,
