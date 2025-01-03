@@ -13,6 +13,13 @@ This project allows users to upload a CSV file, query insights from the dataset,
 
 ## Requirements
 
+#### **Create and Activate a Virtual Environment**
+```bash
+python3 -m venv venv
+source venv/bin/activate  # For Linux/Mac
+venv\Scripts\activate     # For Windows
+```
+
 Before running the project, ensure that all dependencies are installed. You can install them using the `requirements.txt` file provided.
 
 ### Install Dependencies
