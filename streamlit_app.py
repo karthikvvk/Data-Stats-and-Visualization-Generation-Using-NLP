@@ -9,7 +9,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 
-runpy.run_path('train.py')
+#runpy.run_path('train.py')
 
 
 KEY = 'YOUR_GOOGLE_API_KEY_HERE'
