@@ -6,3 +6,4 @@ transformers
 scikit-learn
 datasets
 transformers[torch]
+streamlit
