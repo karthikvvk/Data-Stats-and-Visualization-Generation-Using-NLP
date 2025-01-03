@@ -1,13 +1,4 @@
 import os
-
-lis = open("requirements.txt").readlines()
-pip_lis = []
-for i in lis:
-    os.system(f"pip install {i.removesuffix("\n")}")
-os.system("python -m spacy download en_core_web_sm")
-
-
-
 import pandas as pd
 import runpy
 import spacy
@@ -21,7 +12,7 @@ import matplotlib.pyplot as plt
 runpy.run_path('train.py')
 
 
-KEY = 'AIzaSyBX2e7LY5v1C5E_OfEvZMEERYevcBP_zy8'
+KEY = ''
 genai.configure(api_key=KEY)
 generation_config = {
 "temperature": 1,
