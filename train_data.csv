@@ -21,7 +21,6 @@ query,keywords,graph_requirement
 "What is the status of the order with order number 98765?","status,order,98765","not needed"
 "How many orders have been shipped on status 'Shipped' in the last 30 days?","orders,shipped,status,Shipped,last,30,days","needed"
 "What is the status for the most recent order placed by customer 'John Doe'?","status,most,recent,order,John,Doe","not needed"
-"question,string_representation,visual_rep_needed"
 "What is the total sales for order number 10107?","order,total,sales,10107","not needed"
 "How many items were ordered in order number 10134?","items,ordered,10134","not needed"
 "What is the sales value of the order with order number 10145?","sales,value,order,10145","not needed"
