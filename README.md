@@ -32,7 +32,6 @@ This will install all necessary packages listed in the `requirements.txt` file, 
 - `streamlit`
 - `matplotlib`
 - `datasets`
-- And more...
 
 Additionally, the `spaCy` model `en_core_web_sm` will be automatically downloaded.
 
